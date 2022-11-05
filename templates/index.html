@@ -1,0 +1,186 @@
+<!doctype html>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Literata:wght@500;700&amp;family=Rubik:wght@400;500;700&amp;display=swap">
+<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.2.0/css/all.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+<style>
+    [type="file"] {
+        height: 0;
+        overflow: hidden;
+        width: 0;
+    }
+
+    [type="file"]+label {
+        background: #f15d22;
+        border: none;
+        border-radius: 5px;
+        color: #fff;
+        cursor: pointer;
+        display: inline-block;
+        font-family: 'Rubik', sans-serif;
+        font-size: inherit;
+        font-weight: 500;
+        margin-bottom: 1rem;
+        outline: none;
+        padding: 1rem 50px;
+        position: relative;
+        transition: all 0.3s;
+        vertical-align: middle;
+    }
+
+    [type="file"]+label:hover {
+        background-color: #d3460d;
+    }
+
+    [type="file"]+label.btn-1 {
+        background-color: #f79159;
+        box-shadow: 0 6px #f57128;
+        transition: none;
+    }
+
+    [type="file"]+label.btn-1:hover {
+        box-shadow: 0 4px #f57128;
+        top: 2px;
+    }
+ .btn-1 {
+        background-color: #f79159;
+        box-shadow: 0 6px #f57128;
+        transition: none;
+    }
+
+  .btn-1:hover {
+        box-shadow: 0 4px #f57128;
+        top: 2px;
+    }
+    [type="file"]+label.btn-2 {
+        background-color: #99c793;
+        border-radius: 50px;
+        overflow: hidden;
+    }
+
+    [type="file"]+label.btn-2::before {
+        color: #fff;
+        content: "\f382";
+        font-family: "Font Awesome 5 Pro";
+        font-size: 100%;
+        height: 100%;
+        right: 130%;
+        line-height: 3.3;
+        position: absolute;
+        top: 0px;
+        transition: all 0.3s;
+    }
+
+    [type="file"]+label.btn-2:hover {
+        background-color: #497f42;
+    }
+
+    [type="file"]+label.btn-2:hover::before {
+        right: 75%;
+    }
+
+    [type="file"]+label.btn-3 {
+        background-color: #ee6d9e;
+        border-radius: 0;
+        overflow: hidden;
+    }
+
+    [type="file"]+label.btn-3 span {
+        display: inline-block;
+        height: 100%;
+        transition: all 0.3s;
+        width: 100%;
+    }
+
+    [type="file"]+label.btn-3::before {
+        color: #fff;
+        content: "\f382";
+        font-family: "Font Awesome 5 Pro";
+        font-size: 130%;
+        height: 100%;
+        left: 0;
+        line-height: 2.6;
+        position: absolute;
+        top: -180%;
+        transition: all 0.3s;
+        width: 100%;
+    }
+
+    [type="file"]+label.btn-3:hover {
+        background-color: #ae144f;
+    }
+
+    [type="file"]+label.btn-3:hover span {
+        transform: translateY(300%);
+    }
+
+    [type="file"]+label.btn-3:hover::before {
+        top: 0;
+    }
+
+    body {
+        font-family: 'Literata', serif;
+        font-size: 18px;
+        line-height: 1.3;
+        margin: 1rem 0;
+        text-align: center;
+    }
+
+    .wrapper {
+        background-color: #fff;
+        border-radius: 1rem;
+        margin: 0 auto;
+        max-width: 500px;
+        padding: 2rem;
+        width: 100%;
+    }
+
+    .footer {
+        font-size: 0.8rem;
+        margin-bottom: 0;
+        margin-top: 3rem;
+    }
+
+    h1,
+    p {
+        margin-bottom: 2rem;
+    }
+
+    h1 {
+        font-family: 'Rubik', sans-serif;
+        font-size: 1.7rem;
+    }
+
+    a {
+        color: #31c1ef;
+        text-decoration: none;
+    }
+    .file-name1{
+        margin-left: 2rem;
+    }
+</style>
+<title>Upload an excel file</title>
+
+
+<h1>Excel file upload (csv, xlsx only)</h1>
+<form action="" method=post enctype=multipart/form-data>
+    <!-- <input type=file name=file><input type=submit value=Upload> -->
+<a href="/delete">Delete Cache Folders</a>
+<div class="wrapper"> 
+
+    <input type="file" id="file" name="file"/>
+    <label for="file" class="btn-2">Select File</label>
+    <span class="file-name1">
+      No file uploaded
+    </span>
+    <input class="button" type="submit" value="Submit input">
+    <script>
+  const fileInput = document.querySelector('input[type=file]');
+  fileInput.onchange = () => {
+    if (fileInput.files.length > 0) {
+      const fileName = document.querySelector('.file-name1');
+      fileName.textContent = fileInput.files[0].name;
+    }
+  }
+</script>
+</div>
+</form>
