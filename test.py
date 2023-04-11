@@ -1,0 +1,4 @@
+data_dict = {'exam_1': None, 'exam_2': None, 'exam_3': None, 'exam_4': None, 'exam_5': None, 'exam_6': None, 'exam_7': None, 'exam_8': None, 'exam_9': None, 'exam_10': None, 'sname_1': None, 'sname_2': None, 'sname_3': None, 'sname_4': None, 'sname_5': None, 'sname_6': None, 'sname_7': None, 'sname_8': None, 'sname_9': None, 'sname_10': None,
+             'fname_2': None, 'fname_3': None, 'fname_4': None, 'fname_5': None, 'fname_6': None, 'fname_7': None, 'fname_8': None, 'fname_9': None, 'fname_10': None, 'class_9': None, 'class_10': None, 'class_8': None, 'class_7': None, 'class_5': None, 'class_6': None, 'class_4': None, 'class_3': None, 'class_1': None, 'class_2': None, 'fname_1': None}
+
+print(data_dict['exam_'+str(1)])

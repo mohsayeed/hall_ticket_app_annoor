@@ -28,7 +28,6 @@ pyexcel==0.7.0
 pyexcel-io==0.6.6
 pyexcel-webio==0.1.4
 pyexcel-xlsx==0.6.0
-PyMuPDF==1.20.2
 pyPdf==1.13
 PyPDF2==2.10.9
 PyPDF4==1.27.0
